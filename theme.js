@@ -85,6 +85,9 @@ const theme = createMuiTheme({
     primary: blue,
     secondary: red,
   },
+  typography: {
+    fontFamily: "'Roboto', sans-serif",
+  },
   overrides: {
     MuiTypography: {
       root: {

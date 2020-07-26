@@ -3,8 +3,14 @@ import Typography from '@material-ui/core/Typography'
 import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
 import PlacesIcon from '@material-ui/icons/LocationOn'
+import LaunchIcon from '@material-ui/icons/Launch'
 import { SocialIcon } from 'react-social-icons'
+import dynamic from 'next/dynamic'
 import Chip from '@material-ui/core/Chip'
+
+const LoadFonts = dynamic(() => import('../components/LoadFonts'), {
+  ssr: false,
+})
 
 const styles = (theme) => ({
   container: {
@@ -20,7 +26,10 @@ const styles = (theme) => ({
     color: theme.palette.gray[800],
   },
   section: {
-    margin: theme.spacing(4, 0),
+    margin: theme.spacing(6, 0),
+    '&:nth-last-child(1)': {
+      marginBottom: theme.spacing(20),
+    },
   },
   placesImage: {
     maxWidth: '100%',
@@ -39,7 +48,13 @@ const styles = (theme) => ({
     marginLeft: theme.spacing(1),
   },
   link: {
-    color: theme.palette.green[600],
+    color: theme.palette.indigo[700],
+  },
+  openSourceIcon: {
+    verticalAlign: 'middle',
+    marginLeft: theme.spacing(1),
+    fontSize: '1.2rem',
+    marginBottom: '2px',
   },
 })
 
@@ -72,15 +87,26 @@ const SocialIconBlock = withStyles((theme) => ({
   </div>
 ))
 
+const InterestPoint = withStyles((theme) => ({
+  body: {
+    color: theme.palette.green[700],
+  },
+}))(({ body, classes }) => (
+  <Typography variant="h6" className={classes.body}>
+    {body}
+  </Typography>
+))
+
 const Home = ({ classes }) => {
   return (
     <div className={classes.container}>
+      <LoadFonts />
       <Typography variant="h3" className={classes.title}>
         Nishant Singh
       </Typography>
       <div className={classes.section}>
         <Typography variant="h4" className={classes.subtitle}>
-          About me
+          About
         </Typography>
         <Typography variant="h6" className={classes.subtitle}>
           Founder at&nbsp;
@@ -121,9 +147,33 @@ const Home = ({ classes }) => {
       </div>
       <div className={classes.section}>
         <Typography variant="h4" className={classes.subtitle}>
+          Interests
+        </Typography>
+        <div>
+          <InterestPoint body="Where is (e)ducation heading?" />
+          <InterestPoint body="Web performance" />
+          <InterestPoint body="Hip-hop" />
+          <InterestPoint body="Powerlifting" />
+        </div>
+      </div>
+      <div className={classes.section}>
+        <Typography variant="h4" className={classes.subtitle}>
           Blogs
         </Typography>
         <Typography>Coming soon...</Typography>
+      </div>
+      <div className={classes.section}>
+        <Typography>
+          <a
+            className={classes.link}
+            href="https://github.com/inishant/personal-website"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Source of this website
+            <LaunchIcon className={classes.openSourceIcon} />
+          </a>
+        </Typography>
       </div>
     </div>
   )
