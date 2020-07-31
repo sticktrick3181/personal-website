@@ -41,12 +41,6 @@ const styles = (theme) => ({
     verticalAlign: 'middle',
     marginLeft: theme.spacing(1),
   },
-  aboutMeIcon: {
-    color: theme.palette.green[600],
-    fontSize: '2rem',
-    verticalAlign: 'middle',
-    marginLeft: theme.spacing(1),
-  },
   link: {
     color: theme.palette.indigo[700],
   },
@@ -55,6 +49,13 @@ const styles = (theme) => ({
     marginLeft: theme.spacing(1),
     fontSize: '1.2rem',
     marginBottom: '2px',
+  },
+  picture: {
+    width: '100px',
+    height: '100px',
+    borderRadius: '50px',
+    verticalAlign: 'middle',
+    marginRight: theme.spacing(2),
   },
 })
 
@@ -89,7 +90,27 @@ const SocialIconBlock = withStyles((theme) => ({
 
 const InterestPoint = withStyles((theme) => ({
   body: {
-    color: theme.palette.green[700],
+    color: theme.palette.gray[700],
+  },
+}))(({ body, classes }) => (
+  <Typography variant="h6" className={classes.body}>
+    {body}
+  </Typography>
+))
+
+const FailurePoint = withStyles((theme) => ({
+  body: {
+    color: theme.palette.gray[700],
+  },
+}))(({ body, classes }) => (
+  <Typography variant="h6" className={classes.body}>
+    {body}
+  </Typography>
+))
+
+const FavoriteQuote = withStyles((theme) => ({
+  body: {
+    color: theme.palette.gray[700],
   },
 }))(({ body, classes }) => (
   <Typography variant="h6" className={classes.body}>
@@ -101,7 +122,12 @@ const Home = ({ classes }) => {
   return (
     <div className={classes.container}>
       <LoadFonts />
-      <Typography variant="h3" className={classes.title}>
+      <Typography variant="h4" className={classes.title}>
+        <img
+          className={classes.picture}
+          src="/picture.png"
+          alt="Nishant Singh"
+        />
         Nishant Singh
       </Typography>
       <div className={classes.section}>
@@ -134,6 +160,26 @@ const Home = ({ classes }) => {
       </div>
       <div className={classes.section}>
         <Typography variant="h4" className={classes.subtitle}>
+          Interests
+        </Typography>
+        <div>
+          <InterestPoint body="Where is (e)ducation heading?" />
+          <InterestPoint body="Web performance" />
+          <InterestPoint body="Hip-hop" />
+          <InterestPoint body="Powerlifting" />
+        </div>
+      </div>
+      <div className={classes.section}>
+        <Typography variant="h4" className={classes.subtitle}>
+          Failures
+        </Typography>
+        <div>
+          <FailurePoint body="ScanBot - A book scanning robot startup" />
+          <FailurePoint body="College? - Wasn't for me" />
+        </div>
+      </div>
+      <div className={classes.section}>
+        <Typography variant="h4" className={classes.subtitle}>
           Contact
         </Typography>
         <div>
@@ -147,13 +193,10 @@ const Home = ({ classes }) => {
       </div>
       <div className={classes.section}>
         <Typography variant="h4" className={classes.subtitle}>
-          Interests
+          Favorite quotes/lyrics
         </Typography>
         <div>
-          <InterestPoint body="Where is (e)ducation heading?" />
-          <InterestPoint body="Web performance" />
-          <InterestPoint body="Hip-hop" />
-          <InterestPoint body="Powerlifting" />
+          <FavoriteQuote body="" />
         </div>
       </div>
       <div className={classes.section}>
