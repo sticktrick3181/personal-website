@@ -98,26 +98,6 @@ const InterestPoint = withStyles((theme) => ({
   </Typography>
 ))
 
-const FailurePoint = withStyles((theme) => ({
-  body: {
-    color: theme.palette.gray[700],
-  },
-}))(({ body, classes }) => (
-  <Typography variant="h6" className={classes.body}>
-    {body}
-  </Typography>
-))
-
-const FavoriteQuote = withStyles((theme) => ({
-  body: {
-    color: theme.palette.gray[700],
-  },
-}))(({ body, classes }) => (
-  <Typography variant="h6" className={classes.body}>
-    {body}
-  </Typography>
-))
-
 const Home = ({ classes }) => {
   return (
     <div className={classes.container}>
@@ -164,18 +144,9 @@ const Home = ({ classes }) => {
         </Typography>
         <div>
           <InterestPoint body="Where is (e)ducation heading?" />
-          <InterestPoint body="Web performance" />
+          <InterestPoint body="Web development" />
           <InterestPoint body="Hip-hop" />
           <InterestPoint body="Powerlifting" />
-        </div>
-      </div>
-      <div className={classes.section}>
-        <Typography variant="h4" className={classes.subtitle}>
-          Failures
-        </Typography>
-        <div>
-          <FailurePoint body="ScanBot - A book scanning robot startup" />
-          <FailurePoint body="College? - Wasn't for me" />
         </div>
       </div>
       <div className={classes.section}>
@@ -189,14 +160,6 @@ const Home = ({ classes }) => {
           <SocialIconBlock url="https://www.linkedin.com/in/inishant/" />
           <SocialIconBlock url="https://facebook.com/saysnishant" />
           <SocialIconBlock url="https://www.instagram.com/nish.i.am/" />
-        </div>
-      </div>
-      <div className={classes.section}>
-        <Typography variant="h4" className={classes.subtitle}>
-          Favorite quotes/lyrics
-        </Typography>
-        <div>
-          <FavoriteQuote body="" />
         </div>
       </div>
       <div className={classes.section}>
