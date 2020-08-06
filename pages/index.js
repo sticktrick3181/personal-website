@@ -5,12 +5,7 @@ import { withStyles } from '@material-ui/core/styles'
 import PlacesIcon from '@material-ui/icons/LocationOn'
 import LaunchIcon from '@material-ui/icons/Launch'
 import { SocialIcon } from 'react-social-icons'
-import dynamic from 'next/dynamic'
 import Chip from '@material-ui/core/Chip'
-
-const LoadFonts = dynamic(() => import('../components/LoadFonts'), {
-  ssr: false,
-})
 
 const styles = (theme) => ({
   container: {
@@ -101,7 +96,6 @@ const InterestPoint = withStyles((theme) => ({
 const Home = ({ classes }) => {
   return (
     <div className={classes.container}>
-      <LoadFonts />
       <Typography variant="h4" className={classes.title}>
         <img
           className={classes.picture}
