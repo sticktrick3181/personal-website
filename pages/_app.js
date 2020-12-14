@@ -1,26 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Head from 'next/head'
-import { ThemeProvider } from '@material-ui/core/styles'
-import CssBaseline from '@material-ui/core/CssBaseline'
 import dynamic from 'next/dynamic'
 import PageHead from '../components/PageHead'
-import theme from '../theme'
+import TopNav from '../components/TopNav'
+import '../globals.css'
 
 const LoadFonts = dynamic(() => import('../components/LoadFonts'), {
   ssr: false,
 })
 
-export default function MyApp(props) {
+function MyApp(props) {
   const { Component, pageProps } = props
-
-  React.useEffect(() => {
-    // Remove the server-side injected CSS.
-    const jssStyles = document.querySelector('#jss-server-side')
-    if (jssStyles) {
-      jssStyles.parentElement.removeChild(jssStyles)
-    }
-  }, [])
 
   return (
     <>
@@ -32,11 +23,15 @@ export default function MyApp(props) {
         />
       </Head>
       <LoadFonts />
-      <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <div className="fixed w-full h-full bg-white">
+        <TopNav />
+        <div
+          className="w-full mx-auto p-4 sm:p-8 md:p-12"
+          style={{ maxWidth: '800px' }}
+        >
+          <Component {...pageProps} />
+        </div>
+      </div>
     </>
   )
 }
@@ -45,3 +40,5 @@ MyApp.propTypes = {
   Component: PropTypes.elementType.isRequired,
   pageProps: PropTypes.object.isRequired,
 }
+
+export default MyApp

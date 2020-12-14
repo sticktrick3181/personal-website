@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* all custom utilities are prefixed by ns (nishant singh) */
+
+.ns-link {
+  @apply text-blue-700;
+}

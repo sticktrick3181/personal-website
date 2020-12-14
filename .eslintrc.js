@@ -3,6 +3,7 @@ module.exports = {
     'airbnb',
     'plugin:react/recommended',
     'plugin:prettier/recommended',
+    'prettier/react',
   ],
   parser: 'babel-eslint',
   parserOptions: {
@@ -21,6 +22,7 @@ module.exports = {
     'react/jsx-wrap-multilines': 'off', // conflicts with prettier rule
     'react/forbid-prop-types': 'off', // allow proptypes.object in validation
     'react/jsx-curly-newline': 'off', // conflicts with prettier
+    'react/no-danger': 'off', // expect html to be sanitized
   },
   env: {
     browser: true,

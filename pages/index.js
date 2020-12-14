@@ -1,186 +1,39 @@
 import React from 'react'
-import Typography from '@material-ui/core/Typography'
-import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core/styles'
-import PlacesIcon from '@material-ui/icons/LocationOn'
-import LaunchIcon from '@material-ui/icons/Launch'
-import { SocialIcon } from 'react-social-icons'
-import Chip from '@material-ui/core/Chip'
+import GetAgeFromBirthday from '../utils/GetAgeFromBirthday'
+import CodeIcon from '../icons/Code'
 
-const styles = (theme) => ({
-  container: {
-    maxWidth: '800px',
-    margin: '0 auto',
-    padding: theme.spacing(2),
-  },
-  title: {
-    margin: theme.spacing(4, 0),
-    color: theme.palette.gray[800],
-  },
-  subtitle: {
-    color: theme.palette.gray[800],
-  },
-  section: {
-    margin: theme.spacing(6, 0),
-    '&:nth-last-child(1)': {
-      marginBottom: theme.spacing(20),
-    },
-  },
-  placesImage: {
-    maxWidth: '100%',
-    height: 'auto',
-  },
-  placesIcon: {
-    color: theme.palette.blue[600],
-    fontSize: '2rem',
-    verticalAlign: 'middle',
-    marginLeft: theme.spacing(1),
-  },
-  link: {
-    color: theme.palette.indigo[700],
-  },
-  openSourceIcon: {
-    verticalAlign: 'middle',
-    marginLeft: theme.spacing(1),
-    fontSize: '1.2rem',
-    marginBottom: '2px',
-  },
-  picture: {
-    width: '100px',
-    height: '100px',
-    borderRadius: '50px',
-    verticalAlign: 'middle',
-    marginRight: theme.spacing(2),
-  },
-})
-
-const LocationChip = withStyles((theme) => ({
-  locationChip: {
-    margin: theme.spacing(1, 1, 0, 0),
-  },
-}))(({ name, classes }) => (
-  <Chip
-    label={name}
-    color="primary"
-    variant="outlined"
-    icon={<PlacesIcon />}
-    className={classes.locationChip}
-  />
-))
-
-const SocialIconBlock = withStyles((theme) => ({
-  socialIconContainer: {
-    display: 'inline-block',
-    margin: theme.spacing(1, 1, 0, 0),
-  },
-}))(({ url, classes }) => (
-  <div className={classes.socialIconContainer}>
-    <SocialIcon
-      url={url}
-      target="_blank"
-      style={{ width: '30px', height: '30px' }}
-    />
-  </div>
-))
-
-const InterestPoint = withStyles((theme) => ({
-  body: {
-    color: theme.palette.gray[700],
-  },
-}))(({ body, classes }) => (
-  <Typography variant="h6" className={classes.body}>
-    {body}
-  </Typography>
-))
-
-const Home = ({ classes }) => {
+const HomePage = () => {
+  const birthDay = new Date('1996-01-15')
+  const myAge = GetAgeFromBirthday(birthDay)
   return (
-    <div className={classes.container}>
-      <Typography variant="h4" className={classes.title}>
-        <img
-          className={classes.picture}
-          src="/picture.png"
-          alt="Nishant Singh"
-        />
-        Nishant Singh
-      </Typography>
-      <div className={classes.section}>
-        <Typography variant="h4" className={classes.subtitle}>
-          About
-        </Typography>
-        <Typography variant="h6" className={classes.subtitle}>
-          Founder at&nbsp;
-          <a
-            className={classes.link}
-            href="https://ylurn.com"
-            target="_blank"
-            rel="noreferrer"
-          >
+    <div>
+      <section>
+        <p className="text-indigo-700 text-3xl">Hey!</p>
+        <p className="text-gray-700 text-2xl my-4">
+          {`My name is Nishant Singh. I am ${myAge} years old. I live in India.
+      I am a technology enthusiast and love to build things. I am also the
+      founder of `}
+          <a className="ns-link" href="https://Ylurn.com">
             Ylurn.com
           </a>
-        </Typography>
-      </div>
-      <div className={classes.section}>
-        <Typography variant="h4" className={classes.subtitle}>
-          Places
-        </Typography>
-        <Typography variant="h6" className={classes.subtitle}>
-          <LocationChip name="Kaimganj" />
-          <LocationChip name="Hamirpur" />
-          <LocationChip name="Kanpur" />
-          <LocationChip name="Bangalore" />
-          <LocationChip name="Chennai" />
-        </Typography>
-      </div>
-      <div className={classes.section}>
-        <Typography variant="h4" className={classes.subtitle}>
-          Interests
-        </Typography>
-        <div>
-          <InterestPoint body="Where is (e)ducation heading?" />
-          <InterestPoint body="Web development" />
-          <InterestPoint body="Hip-hop" />
-          <InterestPoint body="Powerlifting" />
-        </div>
-      </div>
-      <div className={classes.section}>
-        <Typography variant="h4" className={classes.subtitle}>
-          Contact
-        </Typography>
-        <div>
-          <SocialIconBlock url="https://twitter.com/iNishant" />
-          <SocialIconBlock url="https://github.com/iNishant" />
-          <SocialIconBlock url="mailto:nishant@ylurn.com" />
-          <SocialIconBlock url="https://www.linkedin.com/in/inishant/" />
-          <SocialIconBlock url="https://facebook.com/saysnishant" />
-          <SocialIconBlock url="https://www.instagram.com/nish.i.am/" />
-        </div>
-      </div>
-      <div className={classes.section}>
-        <Typography variant="h4" className={classes.subtitle}>
-          Blogs
-        </Typography>
-        <Typography>Coming soon...</Typography>
-      </div>
-      <div className={classes.section}>
-        <Typography>
+          . I am passionate about the future of education and software.
+        </p>
+      </section>
+      <section className="mt-8">
+        <p>
           <a
-            className={classes.link}
+            className="ns-link"
             href="https://github.com/inishant/personal-website"
             target="_blank"
             rel="noreferrer"
           >
-            Source of this website
-            <LaunchIcon className={classes.openSourceIcon} />
+            <CodeIcon className="h-4 inline-block align-middle mr-1" /> Source
+            of this website
           </a>
-        </Typography>
-      </div>
+        </p>
+      </section>
     </div>
   )
 }
 
-Home.propTypes = {
-  classes: PropTypes.object.isRequired,
-}
-
-export default withStyles(styles)(Home)
+export default HomePage
