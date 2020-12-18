@@ -1,25 +1,25 @@
 import React from 'react'
-import GetAgeFromBirthday from '../utils/GetAgeFromBirthday'
+// import GetAgeFromBirthday from '../utils/GetAgeFromBirthday'
 import CodeIcon from '../icons/Code'
 import SocialIcon from '../components/SocialIcon'
 
 const sectionClass = 'my-4 py-4'
 
 const HomePage = () => {
-  const birthDay = new Date('1996-01-15')
-  const myAge = GetAgeFromBirthday(birthDay)
+  // const birthDay = new Date('1996-01-15')
+  // const myAge = GetAgeFromBirthday(birthDay)
   return (
     <div>
       <section className={sectionClass}>
         <p className="text-indigo-700 text-3xl">Hey!</p>
         <p className="text-gray-700 text-2xl my-4">
-          {`My name is Nishant Singh. I am ${myAge} years old. I live in India.
-      I am a technology enthusiast and love to build things. I am also the
-      founder of `}
+          My name is Nishant Singh. I am a technology enthusiast, a full-stack
+          developer, passionate about the future of education &amp; software,
+          and love to build things. I am also the founder of&nbsp;
           <a className="ns-link" href="https://Ylurn.com">
             Ylurn.com
           </a>
-          . I am passionate about the future of education and software.
+          .
         </p>
       </section>
       <section className={sectionClass}>
