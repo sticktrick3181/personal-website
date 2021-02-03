@@ -1,28 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Head from 'next/head'
-import dynamic from 'next/dynamic'
-import PageHead from '../components/PageHead'
 import TopNav from '../components/TopNav'
 import '../globals.css'
-
-const LoadFonts = dynamic(() => import('../components/LoadFonts'), {
-  ssr: false,
-})
 
 function MyApp(props) {
   const { Component, pageProps } = props
 
   return (
     <>
-      <PageHead />
-      <Head>
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width"
-        />
-      </Head>
-      <LoadFonts />
       <div className="fixed w-full h-full bg-white">
         <TopNav />
         <div
