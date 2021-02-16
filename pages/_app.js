@@ -8,15 +8,13 @@ function MyApp(props) {
   const { Component, pageProps } = props
 
   return (
-    <>
-      <div className="fixed w-full h-full bg-white">
-        <PageHead />
-        <TopNav />
-        <div className="w-full mx-auto p-4 sm:p-8 md:p-12 max-w-4xl">
-          <Component {...pageProps} />
-        </div>
+    <div className="fixed w-full h-full bg-white dark:bg-gray-800">
+      <PageHead />
+      <TopNav />
+      <div className="w-full mx-auto p-4 sm:p-8 md:p-12 max-w-4xl">
+        <Component {...pageProps} />
       </div>
-    </>
+    </div>
   )
 }
 

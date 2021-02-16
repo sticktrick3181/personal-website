@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-import clsx from 'clsx'
 import { withRouter } from 'next/router'
 
 function isActiveUrl(router, baseUrl) {
@@ -16,14 +15,13 @@ function isActiveUrl(router, baseUrl) {
 }
 
 const TopNav = ({ router }) => (
-  <div className="w-full bg-indigo-100 border-b-indigo-200 py-4 px-4 sm:py-6 sm:px-6 shadow-sm">
+  <div className="w-full bg-indigo-100 dark:bg-indigo-800 border-b-indigo-200 py-4 px-4 sm:py-6 sm:px-6 shadow-sm">
     <Link href="/">
       <a>
         <p
-          className={clsx(
-            'text-base text-indigo-700',
+          className={`text-base text-indigo-700 dark:text-indigo-200 ${
             isActiveUrl(router, '/') ? 'activeClass' : 'baseClass'
-          )}
+          }`}
         >
           About
         </p>

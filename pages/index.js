@@ -10,7 +10,7 @@ const SocialContactsBar = Lazyload(
 )
 
 const SectionTitle = ({ title }) => (
-  <div className="text-4xl font-bold">
+  <div className="text-4xl font-semibold">
     <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
       {title}
     </span>
@@ -22,19 +22,10 @@ const HomePage = () => {
     <div>
       <section className={sectionClass}>
         <SectionTitle title="Hey!" />
-        <p className="text-gray-900 text-3xl my-4">
+        <p className="text-gray-900 dark:text-gray-200 text-3xl my-4">
           My name is Nishant Singh. I am a technology enthusiast and I love to
-          build things. A full-stack developer by profession, I am passionate
-          about the future of education &amp; software. I also founded&nbsp;
-          <a
-            className="ns-link"
-            href="https://Ylurn.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Ylurn.com
-          </a>
-          .
+          build. A full-stack developer by profession, I am passionate about the
+          future of education &amp; software.
         </p>
       </section>
       <section className={sectionClass}>
@@ -46,7 +37,7 @@ const HomePage = () => {
       <section className={sectionClass}>
         <p>
           <a
-            className="ns-link"
+            className="text-blue-800 dark:text-blue-200"
             href="https://github.com/inishant/personal-website"
             target="_blank"
             rel="noreferrer"
