@@ -5,7 +5,7 @@
 /* all custom utilities are prefixed by ns (nishant singh) */
 
 .ns-link {
-  @apply text-blue-700;
+  @apply text-blue-800;
 }
 
 * {

@@ -13,6 +13,13 @@ module.exports = {
       jsx: true,
     },
   },
+  settings: {
+    'import/resolver': {
+      webpack: {
+        config: 'webpackalias.config.js',
+      },
+    },
+  },
   rules: {
     'react/jsx-filename-extension': 'off', // allows .js to contain jsx
     'jsx-a11y/click-events-have-key-events': 'off', // allow all html elements to have onclick
@@ -23,6 +30,7 @@ module.exports = {
     'react/forbid-prop-types': 'off', // allow proptypes.object in validation
     'react/jsx-curly-newline': 'off', // conflicts with prettier
     'react/no-danger': 'off', // expect html to be sanitized
+    'react/prop-types': 'off', // for personal website prop types not required
   },
   env: {
     browser: true,

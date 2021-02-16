@@ -12,10 +12,7 @@ function MyApp(props) {
       <div className="fixed w-full h-full bg-white">
         <PageHead />
         <TopNav />
-        <div
-          className="w-full mx-auto p-4 sm:p-8 md:p-12"
-          style={{ maxWidth: '800px' }}
-        >
+        <div className="w-full mx-auto p-4 sm:p-8 md:p-12 max-w-4xl">
           <Component {...pageProps} />
         </div>
       </div>

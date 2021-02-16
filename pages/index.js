@@ -1,36 +1,46 @@
 import React from 'react'
-// import GetAgeFromBirthday from '../utils/GetAgeFromBirthday'
+import Lazyload from 'components/Lazyload'
 import CodeIcon from '../icons/Code'
-import SocialIcon from '../components/SocialIcon'
 
 const sectionClass = 'my-4 py-4'
 
+const SocialContactsBar = Lazyload(
+  () => import('components/SocialContactsBar'),
+  () => <div className="h-10" />
+)
+
+const SectionTitle = ({ title }) => (
+  <div className="text-4xl font-bold">
+    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+      {title}
+    </span>
+  </div>
+)
+
 const HomePage = () => {
-  // const birthDay = new Date('1996-01-15')
-  // const myAge = GetAgeFromBirthday(birthDay)
   return (
     <div>
       <section className={sectionClass}>
-        <p className="text-indigo-700 text-3xl">Hey!</p>
-        <p className="text-gray-700 text-2xl my-4">
-          My name is Nishant Singh. I am a technology enthusiast, a full-stack
-          developer, passionate about the future of education &amp; software,
-          and love to build things. I am also the founder of&nbsp;
-          <a className="ns-link" href="https://Ylurn.com">
+        <SectionTitle title="Hey!" />
+        <p className="text-gray-900 text-3xl my-4">
+          My name is Nishant Singh. I am a technology enthusiast and I love to
+          build things. A full-stack developer by profession, I am passionate
+          about the future of education &amp; software. I also founded&nbsp;
+          <a
+            className="ns-link"
+            href="https://Ylurn.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             Ylurn.com
           </a>
           .
         </p>
       </section>
       <section className={sectionClass}>
-        <p className="text-indigo-700 text-3xl">Contact</p>
-        <div>
-          <SocialIcon url="https://twitter.com/iNishant" />
-          <SocialIcon url="https://github.com/iNishant" />
-          <SocialIcon url="mailto:nishant@ylurn.com" />
-          <SocialIcon url="https://www.linkedin.com/in/inishant/" />
-          <SocialIcon url="https://facebook.com/saysnishant" />
-          <SocialIcon url="https://www.instagram.com/nish.i.am/" />
+        <SectionTitle title="Contact" />
+        <div className="py-2">
+          <SocialContactsBar />
         </div>
       </section>
       <section className={sectionClass}>
