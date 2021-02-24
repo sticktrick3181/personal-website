@@ -1,16 +1,46 @@
 import React from 'react'
 import Head from 'next/head'
+import PropTypes from 'prop-types'
 
-const PageHead = () => (
-  <Head>
-    <title>Nishant Singh</title>
-    <meta name="description" content="Founder at Ylurn.com" />
-    <meta property="og:title" content="Nishant Singh" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://nishant-singh.com" />
-    <meta property="og:image" content="https://nishant-singh.com/picture.png" />
-    <meta property="og:description" content="Founder at Ylurn.com" />
-  </Head>
-)
+const MAIN_TITLE = 'Nishant Singh'
+const MAIN_DESCRIPTION = 'Technology enthusiast, Full-Stack Developer'
+
+const PageHead = ({ card, title, description }) => {
+  return (
+    <Head>
+      <title>{title}</title>
+      {Boolean(description) && (
+        <meta name="description" content={description} />
+      )}
+      {Boolean(card) && (
+        <>
+          <meta property="og:title" content={card.title} />
+          <meta property="og:type" content={card.type} />
+          <meta property="og:url" content={card.url} />
+          <meta property="og:image" content={card.image} />
+          <meta property="og:description" content={card.description} />
+        </>
+      )}
+    </Head>
+  )
+}
+
+PageHead.defaultProps = {
+  card: {
+    type: 'website',
+    title: MAIN_TITLE,
+    description: MAIN_DESCRIPTION,
+    image: 'https://nishant-singh.com/picture.png',
+    url: 'https://nishant-singh.com',
+  },
+  title: MAIN_TITLE,
+  description: MAIN_DESCRIPTION,
+}
+
+PageHead.propTypes = {
+  card: PropTypes.object,
+  title: PropTypes.string,
+  description: PropTypes.string,
+}
 
 export default PageHead

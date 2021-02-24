@@ -28,8 +28,35 @@ class MyDocument extends Document {
                       `,
             }}
           />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+
+              // inline utils/CheckAndAddDarkModeClass
+
+              const CheckAndAddDarkModeClass = () => {
+                if (
+                  localStorage.theme === 'dark' ||
+                  (!('theme' in localStorage) &&
+                    window.matchMedia('(prefers-color-scheme: dark)').matches)
+                ) {
+                  document.documentElement.classList.add('dark')
+                } else {
+                  document.documentElement.classList.remove('dark')
+                }
+              }
+
+              window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",  e => CheckAndAddDarkModeClass() );
+
+
+
+              CheckAndAddDarkModeClass()
+              
+              `,
+            }}
+          />
         </Head>
-        <body>
+        <body className="bg-gray-100 dark:bg-gray-800">
           <Main />
           <NextScript />
         </body>
