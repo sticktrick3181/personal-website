@@ -1,0 +1,28 @@
+import BlogLayout from 'components/BlogLayout'
+
+export const meta = {
+  title: 'How (and why) I am building my personal website',
+  createdOn: '02/24/2021',
+}
+
+### Why?
+
+Couple of reasons. To begin, it's been close to a decade since I wrote regularly on the internet and I think I miss it. So, I am going to start using this website to maintain a blog. "Why build it? Use something like Medium, Ghost...?" you say. Well, I'm a developer now and with a little bit of effort I can get pretty much the same blogging experience with a huge advantage of owning everything and having the flexibility to have fun with the design/layout. Now, another reason for building this website is for it to serve as a playground for all the cool technologies I come across. I swear there is a new one every week 😅.
+
+Let's hope I stick to the promise of writing regularly here. If I do, I'll write on topics such as online education 📚, web development 🌎, developer experience 👨🏽‍💻 etc. Will try my best to keep them fun and interesting 😃. Also hoping that none of my rants end up here and stay limited to my [Twitter](https://twitter.com/inishant).
+
+> Writing on the internet give you massive leverage.
+
+### How?
+
+This website is built using [Next.js](https://nextjs.org) which is an extremely popular framework for [React.js](https://reactjs.org) and also my go-to framework for building any kind of websites. I highly recommend it. Lot of best practices built right into the framework by default.
+
+The blogs are authored in Markdown using [MDX](https://mdxjs.com/). I could have set up a [Ghost](https://ghost.org/) backend to improve the authoring experience and to have a clear separation of content and UI but I want to avoid servers right now (or paying for hosted version of ghost).
+
+For the UI, I have used [Tailwind CSS](https://tailwindcss.com/) which really helps me "design at the speed of thought". And that's pretty much it in terms of technologies used.
+
+You can find the code for the entire website [here](https://github.com/iNishant/personal-website).
+
+Will catch you on the next one. Like and subscribe?
+
+export default ({ children }) => <BlogLayout card={meta}>{children}</BlogLayout>

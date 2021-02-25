@@ -11,10 +11,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta
-            name="viewport"
-            content="minimum-scale=1, initial-scale=1, width=device-width"
-          />
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-MHHPMHF8RP"
@@ -56,7 +52,8 @@ class MyDocument extends Document {
             }}
           />
         </Head>
-        <body className="bg-gray-100 dark:bg-gray-800">
+        <body className="bg-gray-50 dark:bg-gray-900 overflow-x-hidden">
+          {/* overflow x hidden for footer border scroll issue */}
           <Main />
           <NextScript />
         </body>

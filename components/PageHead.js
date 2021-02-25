@@ -19,6 +19,9 @@ const PageHead = ({ card, title, description }) => {
           <meta property="og:url" content={card.url} />
           <meta property="og:image" content={card.image} />
           <meta property="og:description" content={card.description} />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:site" content="@inishant" />
+          <meta name="twitter:creator" content="@inishant" />
         </>
       )}
     </Head>
