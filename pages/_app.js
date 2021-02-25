@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import TopNav from 'components/TopNav'
-import PageHead from 'components/PageHead'
 import Head from 'next/head'
 import Lazyload from 'components/Lazyload'
 import '../globals.css'
@@ -19,7 +18,6 @@ function MyApp(props) {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Head>
-      <PageHead />
       <div className="w-full mx-auto max-w-4xl">
         <div className="px-0 sm:px-4">
           <TopNav />

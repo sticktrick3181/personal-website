@@ -2,6 +2,7 @@ import React from 'react'
 import { promises as fs } from 'fs'
 // eslint-disable-next-line
 import path from 'path'
+import PageHead from 'components/PageHead'
 import SectionTitle from 'components/SectionTitle'
 import BlogCard from 'components/BlogCard'
 
@@ -10,6 +11,7 @@ const sectionClass = 'my-4 py-4'
 const HomePage = ({ blogs }) => {
   return (
     <div>
+      <PageHead />
       <section className={sectionClass}>
         <SectionTitle title="Hey!" />
         <p className="text-gray-900 dark:text-gray-200 text-3xl my-4">
