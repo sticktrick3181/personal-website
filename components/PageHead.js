@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import GetAbsoluteURLFromRelativeURL from 'utils/GetAbsoluteURLFromRelativeURL'
 
 const MAIN_TITLE = 'Nishant Singh'
-const MAIN_DESCRIPTION = 'Technology enthusiast, Full-Stack Developer'
+const MAIN_DESCRIPTION = 'Technology enthusiast, Full-stack developer'
 
 const PageHead = ({ meta, title, description }) => {
   return (
@@ -43,7 +43,7 @@ PageHead.defaultProps = {
     type: 'website',
     title: MAIN_TITLE,
     description: MAIN_DESCRIPTION,
-    image: GetAbsoluteURLFromRelativeURL('/picture.png'),
+    image: GetAbsoluteURLFromRelativeURL('/images/open-graph-card.png'),
     url: 'https://nishant-singh.com',
   },
   title: MAIN_TITLE,
