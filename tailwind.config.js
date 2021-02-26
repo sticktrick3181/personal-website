@@ -4,6 +4,10 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
+      screens: {
+        print: { raw: 'print' },
+        // => @media print { ... }
+      },
       typography: (theme) => ({
         light: {
           css: [
