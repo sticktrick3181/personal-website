@@ -35,7 +35,7 @@ const TopNav = ({ router }) => {
   }
 
   return (
-    <div className="w-full py-4 sm:py-6 px-4 sm:px-0 flex items-center">
+    <div className="w-full py-4 sm:py-6 px-4 sm:px-0 flex items-center select-none">
       <Link href="/">
         <a
           className={`text-base font-bold uppercase tracking-wider text-indigo-700 dark:text-indigo-300 ${
