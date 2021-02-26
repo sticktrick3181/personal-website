@@ -101,7 +101,7 @@ const ResumePage = () => {
               title="Founder, CEO at Ylurn Technology"
               stack="React (Next.js), React-Native, Django, Tailwind CSS, AWS, Docker Compose"
               duration="Jan 2018 - Jan 2021"
-              description="I founded Ylurn, an Ed-Tech SaaS. At Ylurn I was responsible for all the engineering that included developing REST APIs which were consumed by both mobile and web apps. For the frontend, we used Storybook to test and design components in isolation. For testing we relied on E2E browser tests using cypress and jest for unit tests."
+              description="I founded Ylurn, an Ed-Tech SaaS. At Ylurn I was responsible for all the engineering that included developing REST APIs which were consumed by both mobile and web apps. For the frontend, I used Storybook to test and design react components. For testing I relied on E2E browser tests using cypress and jest for unit tests."
             />
             <JobExperienceBlock
               title="iOS Developer at 1000Lookz (Internship)"
