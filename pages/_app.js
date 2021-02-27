@@ -1,14 +1,35 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import TopNav from 'components/TopNav'
 import Head from 'next/head'
 import Lazyload from 'components/Lazyload'
+import incrementViews from 'utils/incrementViews'
+import { useRouter } from 'next/router'
 import '../globals.css'
 
 const Footer = Lazyload(() => import('components/Footer'))
 
 function MyApp(props) {
+  const router = useRouter()
   const { Component, pageProps } = props
+
+  useEffect(() => {
+    const currentPath = router.pathname
+    incrementViews(currentPath)
+
+    const handleRouteChange = (url) => {
+      const cleanedPath = url.split('?')[0]
+      incrementViews(cleanedPath)
+    }
+
+    router.events.on('routeChangeStart', handleRouteChange)
+
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method:
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange)
+    }
+  }, [])
 
   return (
     <div>
