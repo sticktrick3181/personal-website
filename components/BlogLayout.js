@@ -13,7 +13,7 @@ const BlogLayout = ({ children, meta, router }) => (
       meta={{
         type: 'article',
         url: GetAbsoluteURLFromRelativeURL(router.pathname),
-        image: GetAbsoluteURLFromRelativeURL('/images/open-graph-card.png'),
+        image: GetAbsoluteURLFromRelativeURL('/images/picture.png'),
         ...meta,
       }}
     />

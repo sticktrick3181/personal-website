@@ -43,7 +43,7 @@ PageHead.defaultProps = {
     type: 'website',
     title: MAIN_TITLE,
     description: MAIN_DESCRIPTION,
-    image: GetAbsoluteURLFromRelativeURL('/images/open-graph-card.png'),
+    image: GetAbsoluteURLFromRelativeURL('/images/picture.png'),
     url: 'https://nishant-singh.com',
   },
   title: MAIN_TITLE,
