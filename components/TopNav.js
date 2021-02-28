@@ -5,6 +5,7 @@ import CheckAndAddDarkModeClass from 'utils/CheckAndAddDarkModeClass'
 import Sun from 'icons/Sun'
 import Moon from 'icons/Moon'
 import Home from 'icons/Home'
+import DeviceMobile from 'icons/DeviceMobile'
 import { withRouter } from 'next/router'
 
 function isActiveUrl(router, baseUrl) {
@@ -19,19 +20,26 @@ function isActiveUrl(router, baseUrl) {
 }
 
 const TopNav = ({ router }) => {
-  const [isDarkMode, setIsDarkMode] = useState(null)
+  const [currentTheme, setTheme] = useState(undefined)
 
   useEffect(() => {
-    setIsDarkMode(document.documentElement.classList.contains('dark'))
+    const themeInStorage = localStorage.theme
+    setTheme(themeInStorage || null)
   })
 
   const toggleDarkMode = () => {
-    if (isDarkMode) {
-      localStorage.theme = 'light'
-    } else {
-      localStorage.theme = 'dark'
+    // theme options order [null,'dark', 'light']
+    let finalTheme = null
+    if (currentTheme === null) {
+      finalTheme = 'dark'
+    } else if (currentTheme === 'dark') {
+      finalTheme = 'light'
+    } else if (currentTheme === 'light') {
+      finalTheme = null
     }
-    setIsDarkMode(!isDarkMode)
+    if (finalTheme) localStorage.theme = finalTheme
+    else localStorage.removeItem('theme')
+    setTheme(finalTheme)
     CheckAndAddDarkModeClass()
   }
 
@@ -39,25 +47,24 @@ const TopNav = ({ router }) => {
     <div className="w-full py-4 sm:py-6 px-4 sm:px-0 flex items-center select-none">
       <Link href="/">
         <a
-          className={`text-base font-bold uppercase tracking-widest text-indigo-700 dark:text-indigo-300 flex items-center ${
+          className={`text-base font-bold uppercase tracking-widest text-indigo-500 dark:text-indigo-500 ${
             isActiveUrl(router, '/') ? 'activeClass' : 'baseClass'
           }`}
         >
-          <Home className="h-5 mr-1" />
-          Home
+          <Home className="h-8" />
         </a>
       </Link>
       <div className="flex-1" />
-      {isDarkMode !== null && (
+      {currentTheme !== undefined && (
         <button
           type="button"
           className="outline-none focus:outline-none"
           onClick={toggleDarkMode}
         >
-          {isDarkMode ? (
-            <Moon className="h-6 text-indigo-500" />
-          ) : (
-            <Sun className="h-6 text-yellow-500" />
+          {currentTheme === 'dark' && <Moon className="h-8 text-indigo-500" />}
+          {currentTheme === 'light' && <Sun className="h-8 text-yellow-500" />}
+          {currentTheme === null && (
+            <DeviceMobile className="h-8 text-blue-500" />
           )}
         </button>
       )}
