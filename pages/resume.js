@@ -74,7 +74,7 @@ const ResumePage = () => {
           <SectionTitle title="Summary" />
           <p>
             I am a full-stack developer who loves to build products and
-            experiment with new technologies. I enjoy taking ownership and
+            experiment with new technologies. I also enjoy taking ownership and
             placing myself in the customer’s shoes to design functionality and
             onboarding techniques to help them meet their goals.
           </p>

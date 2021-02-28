@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const SocialIconBlock = ({ url }) => (
   <div className="inline-block mt-2 mr-2">
-    <SocialIcon url={url} target="_blank" className="h-7 w-7" />
+    <SocialIcon url={url} target="_blank" className="h-10 w-10" />
   </div>
 )
 
