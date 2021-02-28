@@ -12,10 +12,10 @@ const SectionTitle = ({ title }) => (
 const ResumePage = () => {
   const resumeRef = useRef()
   return (
-    <div>
+    <div className="prose prose-xl dark:prose-light mx-auto">
       <PageHead title="Nishant Singh • Resume" />
       <div className="flex items-center mb-10">
-        <h1 className="text-2xl text-gray-800 dark:text-gray-200">Resume</h1>
+        <h2 className="text-xl m-0 tracking-widest uppercase">Resume</h2>
         <div className="flex-1" />
         <ReactToPrint
           documentTitle="nishant-singh-resume"
@@ -31,9 +31,8 @@ const ResumePage = () => {
           content={() => resumeRef.current}
         />
       </div>
-      <div className="my-4 w-full h-0.5 bg-gray-100 dark:bg-gray-800" />
       <div
-        className="prose prose-xl dark:prose-light mt-10 space-y-10 print:px-6"
+        className="w-full mt-10 space-y-10 px-6 py-10 border border-gray-300 dark:border-gray-600 print:border-none print:py-0"
         ref={resumeRef}
       >
         <div>

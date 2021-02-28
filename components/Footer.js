@@ -40,7 +40,6 @@ const Footer = () => (
             <Link href="/resume">
               <a className="text-blue-800 uppercase font-bold tracking-widest text-base dark:text-blue-200 flex items-center">
                 <span>Resume</span>
-                <ExternalLink className="h-6 inline-block align-middle ml-1" />
               </a>
             </Link>
           </div>

@@ -39,7 +39,7 @@ function MyApp(props) {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Head>
-      <div className="w-full mx-auto max-w-4xl">
+      <div className="w-full mx-auto max-w-3xl">
         <div className="px-0 sm:px-4">
           <TopNav />
         </div>

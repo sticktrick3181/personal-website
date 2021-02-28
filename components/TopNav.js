@@ -4,6 +4,7 @@ import Link from 'next/link'
 import CheckAndAddDarkModeClass from 'utils/CheckAndAddDarkModeClass'
 import Sun from 'icons/Sun'
 import Moon from 'icons/Moon'
+import Home from 'icons/Home'
 import { withRouter } from 'next/router'
 
 function isActiveUrl(router, baseUrl) {
@@ -38,10 +39,11 @@ const TopNav = ({ router }) => {
     <div className="w-full py-4 sm:py-6 px-4 sm:px-0 flex items-center select-none">
       <Link href="/">
         <a
-          className={`text-base font-bold uppercase tracking-wider text-indigo-700 dark:text-indigo-300 ${
+          className={`text-base font-bold uppercase tracking-widest text-indigo-700 dark:text-indigo-300 flex items-center ${
             isActiveUrl(router, '/') ? 'activeClass' : 'baseClass'
           }`}
         >
+          <Home className="h-5 mr-1" />
           Home
         </a>
       </Link>
