@@ -1,3 +1,11 @@
-## Source code of my personal website
+## Personal Website
 
-[nishant-singh.com](https://nishant-singh.com)
+### Setup
+
+- Install dependencies using `yarn install`
+- Run development server using `yarn run dev`
+
+### Additional Components
+
+- [Hasura](https://hasura.io) backend for storing all website stats
+- [OG Image Generator](https://github.com/iNishant/personal-website-og-image) forked from original vercel [repo](https://github.com/vercel/og-image) to dynamically generate OG images.
