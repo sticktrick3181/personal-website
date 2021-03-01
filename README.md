@@ -8,4 +8,4 @@
 ### Additional Components
 
 - [Hasura](https://hasura.io) backend for storing all website stats
-- OG Image Generator forked from original vercel [repo](https://github.com/vercel/og-image) to dynamically generate OG images.
+- [OG Image Generator](https://og-image.nishant-singh.com/) forked from original vercel [repo](https://github.com/vercel/og-image) to dynamically generate OG images.
