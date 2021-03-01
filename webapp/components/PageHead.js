@@ -14,6 +14,11 @@ const PageHead = ({ meta, title, description }) => {
         <meta name="description" content={description} />
       )}
       <meta name="author" content="Nishant Singh" />
+      <meta property="og:site_name" content="Nishant Singh" />
+      <meta property="og:locale" content="en" />
+      <meta name="twitter:creator" content="@inishant" />
+      <meta name="twitter:meta" content="summary" />
+      <meta name="twitter:site" content="@inishant" />
       {Boolean(meta) && (
         <>
           {Boolean(meta.title) && (
@@ -29,9 +34,7 @@ const PageHead = ({ meta, title, description }) => {
           {Boolean(meta.description) && (
             <meta property="og:description" content={meta.description} />
           )}
-          <meta name="twitter:creator" content="@inishant" />
-          <meta name="twitter:meta" content="summary" />
-          <meta name="twitter:site" content="@inishant" />
+          <meta name="twitter:card" content="summary_large_image" />
         </>
       )}
     </Head>
