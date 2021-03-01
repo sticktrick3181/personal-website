@@ -1,6 +1,6 @@
 ## Personal Website
 
-### Setup Web app
+### Setup Web App
 
 - Install dependencies using `yarn install`
 - Run development server using `yarn run dev`
