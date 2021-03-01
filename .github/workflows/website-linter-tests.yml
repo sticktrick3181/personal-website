@@ -19,5 +19,6 @@ jobs:
       - name: setup and test
         run: |
           npm install -g yarn
+          cd webapp
           yarn install
           yarn run eslint-tests
