@@ -4,6 +4,7 @@ import JobExperienceBlock from 'components/JobExperienceBlock'
 import PageHead from 'components/PageHead'
 import ReactToPrint from 'react-to-print'
 import EducationBlock from 'components/EducationBlock'
+import GetOGImageWithText from 'utils/GetOGImageWithText'
 
 const SectionTitle = ({ title }) => (
   <p className="text-xl uppercase tracking-wide font-semibold">{title}</p>
