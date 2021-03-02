@@ -6,22 +6,48 @@ export default async function handler(req, res) {
     query: { path },
   } = req
 
-  const finalPath = path || '/'
+  const queryPath = path
 
-  // get view count for path (0 if DNE)
-  let data = await hasuraQuery(`{
+  if (req.method === 'GET') {
+    let views = null
+    // returns views for path
+
+    // if path return for path else return aggregate of all paths
+
+    if (queryPath) {
+      const data = await hasuraQuery(`{
+        website_page (where: {path: {_eq: "${queryPath}"}})  {
+          views
+        }
+      }`).then((hData) => hData.website_page)
+
+      views = data.length ? data[0].views : 0
+    } else {
+      views = await hasuraQuery(`{
+        website_page_aggregate {
+          aggregate {
+            sum {
+              views
+            }
+          }
+        } 
+      }`).then((hData) => hData.website_page_aggregate.aggregate.sum.views)
+    }
+
+    successResponse(res, { views })
+  } else if (req.method === 'POST') {
+    // increment views for path
+
+    const finalPath = queryPath || '/' // either available or increment for home page
+
+    // get view count for path (0 if DNE)
+    let data = await hasuraQuery(`{
     website_page (where: {path: {_eq: "${finalPath}"}})  {
       views
     }
   }`).then((hData) => hData.website_page)
 
-  const currentViews = data.length ? data[0].views : 0
-
-  if (req.method === 'GET') {
-    // returns views for path
-    successResponse(res, { views: currentViews })
-  } else if (req.method === 'POST') {
-    // increment views for path
+    const currentViews = data.length ? data[0].views : 0
 
     // create or update
     data = await hasuraQuery(`mutation {

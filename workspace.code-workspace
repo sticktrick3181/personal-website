@@ -2,6 +2,12 @@
   "folders": [
     {
       "path": "./"
+    },
+    {
+      "path": "./webapp"
+    },
+    {
+      "path": "./og-image"
     }
   ],
   "settings": {}

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import TopNav from 'components/TopNav'
 import Head from 'next/head'
 import Lazyload from 'components/Lazyload'
-import incrementViews from 'utils/incrementViews'
+import analyticsService from 'utils/analyticsService'
 import { useRouter } from 'next/router'
 import '../globals.css'
 
@@ -15,11 +15,11 @@ function MyApp(props) {
 
   useEffect(() => {
     const currentPath = router.pathname
-    incrementViews(currentPath)
+    analyticsService.incrementViews(currentPath)
 
     const handleRouteChange = (url) => {
       const cleanedPath = url.split('?')[0]
-      incrementViews(cleanedPath)
+      analyticsService.incrementViews(cleanedPath)
     }
 
     router.events.on('routeChangeStart', handleRouteChange)
