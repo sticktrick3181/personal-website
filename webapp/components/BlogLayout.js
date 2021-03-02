@@ -4,6 +4,7 @@ import PageHead from 'components/PageHead'
 import TimeFromNow from 'components/TimeFromNow'
 import { withRouter } from 'next/router'
 import GetAbsoluteURLFromRelativeURL from 'utils/GetAbsoluteURLFromRelativeURL'
+import GetOGImageWithText from 'utils/GetOGImageWithText'
 import Image from 'next/image'
 
 const BlogLayout = ({ children, meta, router }) => (
@@ -13,7 +14,7 @@ const BlogLayout = ({ children, meta, router }) => (
       meta={{
         type: 'article',
         url: GetAbsoluteURLFromRelativeURL(router.pathname),
-        image: GetAbsoluteURLFromRelativeURL('/images/picture.png'),
+        image: GetOGImageWithText('Nishant Singh • Blog'),
         ...meta,
       }}
     />

@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import PropTypes from 'prop-types'
-import GetAbsoluteURLFromRelativeURL from 'utils/GetAbsoluteURLFromRelativeURL'
+import GetOGImageWithText from 'utils/GetOGImageWithText'
 
 const MAIN_TITLE = 'Nishant Singh'
 const MAIN_DESCRIPTION = 'Technology enthusiast, Full-stack developer'
@@ -46,7 +46,7 @@ PageHead.defaultProps = {
     type: 'website',
     title: MAIN_TITLE,
     description: MAIN_DESCRIPTION,
-    image: GetAbsoluteURLFromRelativeURL('/images/picture.png'),
+    image: GetOGImageWithText('Nishant Singh'),
     url: 'https://nishant-singh.com',
   },
   title: MAIN_TITLE,

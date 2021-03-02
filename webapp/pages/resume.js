@@ -13,7 +13,14 @@ const ResumePage = () => {
   const resumeRef = useRef()
   return (
     <div className="prose prose-xl dark:prose-light mx-auto">
-      <PageHead title="Nishant Singh • Resume" />
+      <PageHead />
+      <PageHead
+        title="Nishant Singh • Resume"
+        meta={{
+          type: 'article',
+          image: GetOGImageWithText('Nishant Singh • Resume'),
+        }}
+      />
       <div className="flex items-center mb-10">
         <h2 className="text-xl m-0 tracking-widest uppercase">Resume</h2>
         <div className="flex-1" />
