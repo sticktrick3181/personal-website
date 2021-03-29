@@ -5,6 +5,7 @@ import CheckAndAddDarkModeClass from 'utils/CheckAndAddDarkModeClass'
 import Sun from 'icons/Sun'
 import Moon from 'icons/Moon'
 import Home from 'icons/Home'
+import { motion } from 'framer-motion'
 import DeviceMobile from 'icons/DeviceMobile'
 import { withRouter } from 'next/router'
 
@@ -46,17 +47,23 @@ const TopNav = ({ router }) => {
   return (
     <div className="w-full py-4 sm:py-6 px-4 sm:px-0 flex items-center select-none">
       <Link href="/">
-        <a
-          className={`text-base font-bold uppercase tracking-widest text-indigo-500 dark:text-indigo-500 ${
+        <motion.a
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ duration: 0.1 }}
+          className={`text-base font-bold uppercase tracking-widest text-indigo-500 dark:text-indigo-500 cursor-pointer ${
             isActiveUrl(router, '/') ? 'activeClass' : 'baseClass'
           }`}
         >
           <Home className="h-8" />
-        </a>
+        </motion.a>
       </Link>
       <div className="flex-1" />
       {currentTheme !== undefined && (
-        <button
+        <motion.button
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ duration: 0.1 }}
           type="button"
           className="outline-none focus:outline-none"
           onClick={toggleDarkMode}
@@ -66,7 +73,7 @@ const TopNav = ({ router }) => {
           {currentTheme === null && (
             <DeviceMobile className="h-8 text-blue-500" />
           )}
-        </button>
+        </motion.button>
       )}
     </div>
   )

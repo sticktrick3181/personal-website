@@ -29,11 +29,11 @@ const hasuraQuery = (queryString) => {
         }
       )
       .then((jsonData) => {
-        if (jsonData.errors) {
+        if (jsonData?.errors) {
           logHasuraError(jsonData.errors)
           reject(jsonData.errors)
         } else {
-          resolve(jsonData.data)
+          resolve(jsonData?.data)
         }
       })
   })
