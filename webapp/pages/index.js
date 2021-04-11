@@ -4,32 +4,42 @@ import { promises as fs } from 'fs'
 import path from 'path'
 import PageHead from 'components/PageHead'
 import SectionTitle from 'components/SectionTitle'
+import LifeUpdatesOverview from 'components/LifeUpdatesOverview'
 import BlogCard from 'components/BlogCard'
-
-const sectionClass = 'my-4 py-4'
+import ExternalLink from 'components/ExternalLink'
 
 const HomePage = ({ blogs }) => {
   return (
-    <div>
+    <div className="space-y-16">
       <PageHead />
-      <section className={sectionClass}>
+      <section>
         <SectionTitle title="Hey!" />
         <p className="text-gray-900 dark:text-gray-200 text-3xl my-4">
           My name is Nishant Singh. I am a technology enthusiast who loves to
           build things. A full-stack developer by profession, I am passionate
-          about the future of education &amp; software. I also founded&nbsp;
-          <a
+          about the future of education &amp; software. I am currently part of
+          the amazing team at&nbsp;
+          <ExternalLink
+            className="text-blue-700 dark:text-blue-400"
+            href="https://mydukaan.io"
+          >
+            Dukaan
+          </ExternalLink>
+          . In the past I founded&nbsp;
+          <ExternalLink
             className="text-blue-700 dark:text-blue-400"
             href="https://ylurn.com"
-            target="_blank"
-            rel="noreferrer"
           >
             Ylurn
-          </a>
+          </ExternalLink>
           , an Ed-Tech SaaS.
         </p>
       </section>
-      <section className={sectionClass}>
+      <section>
+        <SectionTitle title="Life Updates" />
+        <LifeUpdatesOverview />
+      </section>
+      <section>
         <SectionTitle title="Blogs" />
         <div className="mt-6">
           {blogs.map((blog) => (
