@@ -37,7 +37,7 @@ const BlogLayout = ({ children, meta, router }) => {
         />
         <div className="ml-2">
           <p className="font-bold m-0">Nishant Singh</p>
-          <span className="mr-1">Published</span>
+          <span>Published&nbsp;</span>
           <TimeFromNow value={meta.createdOn} />
         </div>
       </div>
