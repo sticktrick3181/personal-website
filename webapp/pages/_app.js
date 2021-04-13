@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import TopNav from 'components/TopNav'
 import Head from 'next/head'
@@ -8,6 +9,14 @@ import { useRouter } from 'next/router'
 import '../globals.css'
 
 const Footer = Lazyload(() => import('components/Footer'))
+
+// setup axe in development immediately
+if (process.env.NODE_ENV !== 'production' && typeof window !== 'undefined') {
+  import('@axe-core/react').then((module) => {
+    const axe = module.default
+    axe(React, ReactDOM, 1000)
+  })
+}
 
 function MyApp(props) {
   const router = useRouter()

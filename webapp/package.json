@@ -12,6 +12,7 @@
     "eslint-format": "eslint --fix '**/*.js'"
   },
   "dependencies": {
+    "@axe-core/react": "^4.1.1",
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^10.0.7",
     "@tailwindcss/typography": "^0.4.0",
