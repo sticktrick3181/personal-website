@@ -1,4 +1,4 @@
-name: Website Linter tests
+name: Website Browser tests
 
 on: push
 
@@ -18,8 +18,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: setup and test
         run: |
-          npm install -g yarn
-          cd frontend/webapp
+          cd webapp
           yarn install
-          yarn run eslint-tests
-          yarn run prettier-tests
+          yarn run dev &
+          sleep 10
+          yarn run cypress-tests
