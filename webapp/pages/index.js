@@ -14,7 +14,7 @@ const HomePage = ({ blogs }) => {
       <PageHead />
       <section>
         <SectionTitle title="Hey!" />
-        <p className="text-gray-900 dark:text-gray-200 text-3xl my-4">
+        <h1 className="text-gray-900 dark:text-gray-200 text-3xl my-4">
           My name is Nishant Singh. I am a technology enthusiast who loves to
           build things. A full-stack developer by profession, I am passionate
           about the future of education &amp; software. I am currently part of
@@ -33,7 +33,7 @@ const HomePage = ({ blogs }) => {
             Ylurn
           </ExternalLink>
           , an Ed-Tech SaaS.
-        </p>
+        </h1>
       </section>
       <section>
         <SectionTitle title="Life Updates" />

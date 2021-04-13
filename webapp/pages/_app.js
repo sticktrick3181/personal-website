@@ -53,9 +53,9 @@ function MyApp(props) {
           <TopNav />
         </div>
         {/* content wrapper */}
-        <div className="px-4 py-4 sm:py-8 md:py-12 min-h-screen">
+        <main role="main" className="px-4 py-4 sm:py-8 md:py-12 min-h-screen">
           <Component {...pageProps} />
-        </div>
+        </main>
         <div>
           <Footer />
         </div>

@@ -45,7 +45,10 @@ const TopNav = ({ router }) => {
   }
 
   return (
-    <div className="w-full py-4 sm:py-6 px-4 sm:px-0 flex items-center select-none">
+    <nav
+      role="navigation"
+      className="w-full py-4 sm:py-6 px-4 sm:px-0 flex items-center select-none"
+    >
       <Link href="/">
         <motion.a
           whileHover={{ scale: 1.2 }}
@@ -67,6 +70,7 @@ const TopNav = ({ router }) => {
           type="button"
           className="outline-none focus:outline-none"
           onClick={toggleDarkMode}
+          title="theme"
         >
           {currentTheme === 'dark' && <Moon className="h-8 text-indigo-500" />}
           {currentTheme === 'light' && <Sun className="h-8 text-yellow-500" />}
@@ -75,7 +79,7 @@ const TopNav = ({ router }) => {
           )}
         </motion.button>
       )}
-    </div>
+    </nav>
   )
 }
 
