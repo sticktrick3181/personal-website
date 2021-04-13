@@ -6,7 +6,7 @@ module.exports = {
     'prettier/react',
     'plugin:jsx-a11y/recommended',
   ],
-  plugins: ['jsx-a11y'],
+  plugins: ['jsx-a11y', 'cypress'],
   parser: 'babel-eslint',
   parserOptions: {
     sourceType: 'module',
@@ -37,6 +37,7 @@ module.exports = {
   env: {
     browser: true,
     node: true,
+    'cypress/globals': true,
   },
   globals: {
     page: true,
