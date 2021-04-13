@@ -21,14 +21,16 @@ const LifeUpdatesBlock = () => (
       />
     </div>
     <div className="h-10 w-full bg-transparent" />
-    <div className="h-32 absolute w-full left-0 right-0 -mt-32 rounded-b-2xl flex items-center justify-center bg-gradient-to-t pt-6 from-gray-500 dark:from-gray-800">
+    <div className="h-32 absolute w-full left-0 right-0 -mt-32 rounded-b-2xl flex items-center justify-center bg-gradient-to-t pt-6 via-white from-white dark:from-gray-700 dark:via-gray-700">
       <Link href="/life">
         <button
           type="button"
           className="w-full h-full text-xl font-bold flex items-center justify-center text-gray-700 dark:text-gray-300 outline-none focus:outline-none"
         >
-          <span className="mr-1">See all updates</span>
-          <ExternalLink className="h-6" />
+          <span className="mr-1 text-sm tracking-wider uppercase">
+            See all updates
+          </span>
+          <ExternalLink className="h-4" />
         </button>
       </Link>
     </div>
