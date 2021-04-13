@@ -1,4 +1,5 @@
 const logHasuraError = (error) => {
+  // eslint-disable-next-line
   console.log('error occurred in hasuraQuery: ', error)
 }
 

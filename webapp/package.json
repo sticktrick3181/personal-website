@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "eslint-tests": "eslint '**/*.js'"
+    "prettier-tests": "prettier --check '**/*.js'",
+    "prettier-format": "prettier --write '**/*.js'",
+    "eslint-tests": "eslint '**/*.js'",
+    "eslint-format": "eslint --fix '**/*.js'"
   },
   "dependencies": {
     "@mdx-js/loader": "^1.6.22",
