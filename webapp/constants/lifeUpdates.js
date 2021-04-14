@@ -20,8 +20,8 @@ export default [
       <>
         Failed to scale my startup{' '}
         <ExternalLink href="https://ylurn.com">Ylurn</ExternalLink>. Learned
-        (the hard way) that your team is more important any product and never to
-        mindlessly build too much.
+        (the hard way) that building a solid team is equally important as
+        building the product and to never mindlessly build too much.
       </>
     ),
     timestamp: '01/15/2021',
