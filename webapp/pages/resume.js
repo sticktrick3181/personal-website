@@ -40,7 +40,7 @@ const ResumePage = () => {
         />
       </div>
       <div
-        className="w-full mt-10 space-y-10 px-6 py-10 border border-gray-300 dark:border-gray-600 print:border-none print:py-0"
+        className="w-full mt-10 space-y-10 px-6 py-10 border-2 border-gray-300 dark:border-gray-600 print:border-none print:py-0"
         ref={resumeRef}
       >
         <div>
@@ -105,10 +105,16 @@ const ResumePage = () => {
           <SectionTitle title="Experience" />
           <div className="space-y-10 print:space-y-0">
             <JobExperienceBlock
+              title="Full-Stack Developer, Dukaan®"
+              stack="React (Next.js), Django"
+              duration="March 2021 - Present"
+              description="At Dukaan where we are helping millions of SMEs expand and grow their businesses online."
+            />
+            <JobExperienceBlock
               title="Founder, CEO at Ylurn Technology"
               stack="React (Next.js), React-Native, Django, Tailwind CSS, AWS, Docker Compose"
               duration="Jan 2018 - Jan 2021"
-              description="I founded Ylurn, an Ed-Tech SaaS. At Ylurn I was responsible for all the engineering that included developing REST APIs which were consumed by both mobile and web apps. For the frontend, the website was built using Next.js. I used Storybook to test and design react components and Tailwind CSS for styling components. For testing I relied on E2E browser tests using cypress and jest for unit tests."
+              description="I founded Ylurn, an Ed-Tech SaaS. At Ylurn I was responsible for all the engineering during the initial years that included developing REST APIs which were consumed by both mobile and web apps and the website which was built using Next.js. I used Storybook to test and design react components and Tailwind CSS for styling components. For testing I relied on E2E browser tests using cypress and jest for unit tests."
             />
             <JobExperienceBlock
               title="iOS Developer at 1000Lookz (Internship)"

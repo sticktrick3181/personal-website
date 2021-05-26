@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 gap-4">
           <div className="col-span-2 md:col-span-1 mb-10">
             <div>
-              <p className="text-gray-700 uppercase text-base font-semibold tracking-widest dark:text-gray-200">
+              <p className="text-gray-700 mb-4 uppercase text-base font-semibold tracking-widest dark:text-gray-200">
                 Find me on the internet
               </p>
               <div>
@@ -60,6 +60,15 @@ const Footer = () => {
             )}
           </div>
         </div>
+        {/* <div className="grid grid-cols-2 gap-4">
+          <div className="col-span-2 md:col-span-1 mb-10">
+            <div>
+              <p className="text-gray-700 uppercase text-base font-semibold tracking-widest dark:text-gray-200">
+                THIS WEBSITE IS BUILT USING
+              </p>
+            </div>
+          </div>
+        </div> */}
       </div>
     </footer>
   )

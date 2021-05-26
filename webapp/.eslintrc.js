@@ -33,6 +33,7 @@ module.exports = {
     'react/jsx-curly-newline': 'off', // conflicts with prettier
     'react/no-danger': 'off', // expect html to be sanitized
     'react/prop-types': 'off', // for personal website prop types not required
+    'dequeuniversity/anchor-is-valid': 'off', // nextjs Link will generate warnings
   },
   env: {
     browser: true,
