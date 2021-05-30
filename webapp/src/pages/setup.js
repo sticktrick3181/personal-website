@@ -28,7 +28,12 @@ const LifePage = ({ list }) => (
       </p>
     </section>
     <section>
-      <SectionTitle title="Hardware" className="m-0" />
+      <div className="mb-6">
+        <SectionTitle title="Hardware" spacingClasses="m-0" />
+        <p className="invisible dark:visible text-sm text-gray-500">
+          No dark mode for these cards :(
+        </p>
+      </div>
       <div className="grid grid-cols-2 gap-8">
         {list.map((item) => (
           <div key={item.productName} className="col-span-2 md:col-span-1">
@@ -38,7 +43,7 @@ const LifePage = ({ list }) => (
       </div>
     </section>
     <section>
-      <SectionTitle title="VSCode Plugins" className="m-0" />
+      <SectionTitle title="Developer Tools" className="m-0" />
       <p className="text-lg text-gray-500">Coming soon...</p>
     </section>
   </div>

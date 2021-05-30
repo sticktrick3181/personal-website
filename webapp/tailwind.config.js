@@ -78,6 +78,7 @@ module.exports = {
       borderWidth: ['last'],
       boxShadow: ['focus'],
       typography: ['dark'],
+      visibility: ['dark'],
     },
   },
   plugins: [

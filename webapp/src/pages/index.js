@@ -54,7 +54,7 @@ const HomePage = ({ blogs }) => {
 }
 
 export async function getStaticProps() {
-  const blogsDirectory = path.join(process.cwd(), 'pages/blog')
+  const blogsDirectory = path.join(process.cwd(), 'src/pages/blog')
   const filenames = await fs.readdir(blogsDirectory)
 
   const blogs = filenames.map(async (fileName) => {
