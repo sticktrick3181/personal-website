@@ -6,6 +6,7 @@ import Head from 'next/head'
 import Lazyload from 'components/Lazyload'
 import analyticsService from 'utils/analyticsService'
 import { useRouter } from 'next/router'
+import { AnimatePresence, motion } from 'framer-motion'
 import '../globals.css'
 
 const Footer = Lazyload(() => import('components/Footer'))
@@ -53,9 +54,18 @@ function MyApp(props) {
           <TopNav />
         </div>
         {/* content wrapper */}
-        <main role="main" className="px-4 py-4 sm:py-8 md:py-12 min-h-screen">
-          <Component {...pageProps} />
-        </main>
+        <AnimatePresence>
+          <motion.main
+            key={router.route}
+            initial={{ x: 1000, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -1000, opacity: 0 }}
+            role="main"
+            className="px-4 py-4 sm:py-8 md:py-12 min-h-screen"
+          >
+            <Component {...pageProps} />
+          </motion.main>
+        </AnimatePresence>
         <div>
           <Footer />
         </div>

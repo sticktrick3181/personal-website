@@ -62,7 +62,7 @@ const HomePage = ({ blogs }) => {
           >
             <p className="text-2xl text-gray-700 dark:text-gray-200 flex items-center">
               <span>A list of my favourite hardware and software tools</span>
-              <ExternalLinkIcon className="h-6 flex-shrink-0 text-blue-500 dark:text-gray-400 ml-1" />
+              <ExternalLinkIcon className="h-6 flex-shrink-0 text-blue-500 ml-1" />
             </p>
           </motion.a>
         </Link>
