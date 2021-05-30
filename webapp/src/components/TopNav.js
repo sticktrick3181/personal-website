@@ -58,7 +58,7 @@ const TopNav = ({ router }) => {
             isActiveUrl(router, '/') ? 'activeClass' : 'baseClass'
           }`}
         >
-          <Home className="h-8" />
+          <Home className="h-10" />
         </motion.a>
       </Link>
       <div className="flex-1" />
@@ -72,10 +72,10 @@ const TopNav = ({ router }) => {
           onClick={toggleDarkMode}
           title="theme"
         >
-          {currentTheme === 'dark' && <Moon className="h-8 text-indigo-500" />}
-          {currentTheme === 'light' && <Sun className="h-8 text-yellow-500" />}
+          {currentTheme === 'dark' && <Moon className="h-10 text-indigo-500" />}
+          {currentTheme === 'light' && <Sun className="h-10 text-yellow-500" />}
           {currentTheme === null && (
-            <DeviceMobile className="h-8 text-blue-500" />
+            <DeviceMobile className="h-10 text-blue-500" />
           )}
         </motion.button>
       )}

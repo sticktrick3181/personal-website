@@ -57,6 +57,7 @@ function MyApp(props) {
         <AnimatePresence>
           <motion.main
             key={router.route}
+            transition={{ duration: 0.5 }}
             initial={{ x: 1000, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -1000, opacity: 0 }}
