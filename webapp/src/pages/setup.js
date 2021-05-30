@@ -57,7 +57,7 @@ const LifePage = ({ itemTypes }) => {
           My Setup
         </h1>
         <p className="text-2xl text-gray-500 dark:text-gray-400 mt-2">
-          A list of my favorite hardware and software tools.
+          A list of my favourite hardware and software tools.
         </p>
       </section>
       {itemTypes.map((currentItemType) => (

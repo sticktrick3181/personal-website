@@ -12,7 +12,7 @@ const Footer = () => {
   }, [])
 
   return (
-    <footer role="contentinfo" className="mt-40">
+    <footer role="contentinfo" className="mt-96">
       <div
         className="w-screen relative left-1/2 right-1/2 h-0.5 bg-gray-200 dark:bg-gray-800"
         style={{

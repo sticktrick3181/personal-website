@@ -13,7 +13,7 @@ SectionTitle.defaultProps = {
   spacingClasses: 'mt-8 mb-4',
 }
 
-SectionTitle.defaultProps = {
+SectionTitle.propTypes = {
   title: PropTypes.string.isRequired,
   spacingClasses: PropTypes.string,
 }

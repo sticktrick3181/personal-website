@@ -6,7 +6,10 @@ import PageHead from 'components/PageHead'
 import SectionTitle from 'components/SectionTitle'
 import LifeUpdatesOverview from 'components/LifeUpdatesOverview'
 import BlogCard from 'components/BlogCard'
+import { ExternalLinkIcon } from '@heroicons/react/solid'
+import { motion } from 'framer-motion'
 import ExternalLink from 'components/ExternalLink'
+import Link from 'next/link'
 
 const HomePage = ({ blogs }) => {
   return (
@@ -48,6 +51,21 @@ const HomePage = ({ blogs }) => {
             </div>
           ))}
         </div>
+      </section>
+      <section>
+        <SectionTitle title="My Setup" />
+        <Link href="/setup">
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.1 }}
+            className="mt-6 block bg-blue-100 dark:bg-blue-900 p-6 rounded-xl border-transparent hover:border-blue-500 border-2 cursor-pointer shadow-lg"
+          >
+            <p className="text-2xl text-gray-700 dark:text-gray-200 flex items-center">
+              <span>A list of my favourite hardware and software tools</span>
+              <ExternalLinkIcon className="h-6 flex-shrink-0 text-blue-500 dark:text-gray-400 ml-1" />
+            </p>
+          </motion.a>
+        </Link>
       </section>
     </div>
   )
