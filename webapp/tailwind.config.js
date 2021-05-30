@@ -1,6 +1,10 @@
 module.exports = {
   important: true, // to override mui styles (will be removed post change)
-  purge: ['./pages/**/*.js', './components/**/*.js'],
+  purge: [
+    './src/pages/**/*.js',
+    './src/components/**/*.js',
+    './src/icons/**/*.js',
+  ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
