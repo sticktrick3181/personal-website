@@ -29,7 +29,7 @@ const BlogLayout = ({ children, meta, router }) => {
       <h1 className="text-3xl md:text-5xl">{meta.title}</h1>
       <div className="text-sm flex items-center">
         <Image
-          src="/images/picture.png"
+          src="/images/picture-circle.png"
           layout="fixed"
           className="rounded-full"
           height={40}
