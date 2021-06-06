@@ -1,8 +1,8 @@
 {
   "name": "Nishant Singh - Personal Website",
   "short_name": "Nishant Singh",
-  "theme_color": "#ffffff",
-  "background_color": "#004740",
+  "theme_color": "#E2E8F0",
+  "background_color": "#F8FAFC",
   "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
