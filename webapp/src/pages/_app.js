@@ -44,10 +44,13 @@ function MyApp(props) {
   return (
     <div>
       <Head>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
+        <link rel="manifest" href="/manifest.json" />
       </Head>
       <div className="w-full mx-auto max-w-3xl">
         <div className="px-0 sm:px-4">
