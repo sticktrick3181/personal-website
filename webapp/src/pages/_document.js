@@ -1,4 +1,5 @@
 import React from 'react'
+import Script from 'next/script'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {
@@ -11,8 +12,8 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <script
-            async
+          <Script
+            strategy="afterInteractive"
             src="https://www.googletagmanager.com/gtag/js?id=G-MHHPMHF8RP"
           />
           <script

@@ -11,6 +11,8 @@ import '../globals.css'
 
 const Footer = Lazyload(() => import('components/Footer'))
 
+const PAGE_TRANSITION_DELAY_SECONDS = 0.5
+
 // setup axe in development immediately
 if (process.env.NODE_ENV !== 'production' && typeof window !== 'undefined') {
   import('@axe-core/react').then((module) => {
@@ -60,7 +62,7 @@ function MyApp(props) {
         <AnimatePresence>
           <motion.main
             key={router.route}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: PAGE_TRANSITION_DELAY_SECONDS }}
             initial={{ x: 1000, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -1000, opacity: 0 }}

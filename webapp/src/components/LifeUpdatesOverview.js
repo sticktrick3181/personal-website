@@ -22,7 +22,7 @@ const LifeUpdatesBlock = () => (
     </div>
     <div className="h-10 w-full bg-transparent" />
     <div className="h-32 absolute w-full left-0 right-0 -mt-32 rounded-b-2xl flex items-center justify-center bg-gradient-to-t pt-6 via-white from-white dark:from-gray-700 dark:via-gray-700">
-      <Link href="/life">
+      <Link href="/life" passHref>
         <button
           type="button"
           className="w-full h-full text-xl font-bold flex items-center justify-center text-gray-700 dark:text-gray-300 outline-none focus:outline-none"

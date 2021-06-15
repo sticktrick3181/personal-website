@@ -101,8 +101,6 @@ export const getStaticProps = async () => {
     if (matchedType) matchedType.items.push(item)
   })
 
-  console.log(JSON.stringify(allItemTypes))
-
   return {
     props: {
       itemTypes: allItemTypes,
