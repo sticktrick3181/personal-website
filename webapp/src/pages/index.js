@@ -54,7 +54,7 @@ const HomePage = ({ blogs }) => {
       </section>
       <section>
         <SectionTitle title="My Setup" />
-        <Link href="/setup">
+        <Link href="/setup" passHref>
           <motion.a
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.1 }}

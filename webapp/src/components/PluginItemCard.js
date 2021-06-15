@@ -10,6 +10,7 @@ const PluginItemCard = ({
     rel="noopener noreferrer"
     className="bg-white dark:bg-gray-800 p-6 shadow-xl hover:shadow-md rounded-xl h-40 flex flex-row items-center"
   >
+    {/* eslint-disable-next-line */}
     <img
       src={image}
       alt={productName}

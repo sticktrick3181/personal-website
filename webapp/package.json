@@ -11,7 +11,8 @@
     "eslint-tests": "eslint '**/*.js'",
     "eslint-format": "eslint --fix '**/*.js'",
     "cypress-tests": "cypress run",
-    "cypress-open": "cypress open"
+    "cypress-open": "cypress open",
+    "lint": "next lint"
   },
   "dependencies": {
     "@heroicons/react": "^1.0.1",
@@ -38,7 +39,7 @@
     "babel-eslint": "^10.0.3",
     "cypress": "^7.1.0",
     "cypress-axe": "^0.12.2",
-    "eslint": "^6.8.0",
+    "eslint": "^7.28.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-next": "^11.0.0",
     "eslint-config-prettier": "^6.11.0",

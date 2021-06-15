@@ -49,7 +49,7 @@ const TopNav = ({ router }) => {
       role="navigation"
       className="w-full py-4 sm:py-6 px-4 sm:px-0 flex items-center select-none"
     >
-      <Link href="/">
+      <Link href="/" passHref>
         <motion.a
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}

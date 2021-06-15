@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import TimeFromNow from 'components/TimeFromNow'
 
 const BlogCard = ({ blog }) => (
-  <Link href={`blog/${blog.slug}`}>
+  <Link href={`blog/${blog.slug}`} passHref>
     <motion.div
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.1 }}

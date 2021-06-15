@@ -18,6 +18,7 @@ const HardwareItemCard = ({
       <span className="text-gray-700 dark:text-gray-400">{productType}</span>
     </h4>
     <div className="flex items-center justify-center">
+      {/* eslint-disable-next-line */}
       <img
         src={image}
         alt={productName}
