@@ -3,8 +3,8 @@ import DocumentDownload from 'icons/DocumentDownload'
 import JobExperienceBlock from 'components/JobExperienceBlock'
 import PageHead from 'components/PageHead'
 import ReactToPrint from 'react-to-print'
-import EducationBlock from 'components/EducationBlock'
 import GetOGImageWithText from 'utils/GetOGImageWithText'
+import { motion } from 'framer-motion'
 
 const SectionTitle = ({ title }) => (
   <p className="text-xl uppercase tracking-wide font-semibold">{title}</p>
@@ -28,13 +28,16 @@ const ResumePage = () => {
         <ReactToPrint
           documentTitle="nishant-singh-resume"
           trigger={() => (
-            <button
+            <motion.button
               type="button"
               className="outline-none focus:outline-none"
               title="Download"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ duration: 0.1 }}
             >
               <DocumentDownload className="h-7 text-indigo-500" />
-            </button>
+            </motion.button>
           )}
           content={() => resumeRef.current}
         />
@@ -127,24 +130,6 @@ const ResumePage = () => {
               stack="Swift, XCode"
               duration="Jan 2016 - May 2016"
               description="Created an iOS app using Swift which was used to pay at shops using QR codes and even had an offline mode. I had to replicate the UI of pre-existing android app, work with basic camera, encryption and QR code scanning libraries to implement the payment flow."
-            />
-          </div>
-        </div>
-        <div>
-          {/* education */}
-          <SectionTitle title="Education" />
-          <div className="space-y-10 print:space-y-0">
-            <EducationBlock
-              title="B.Tech / M.Tech in Electrical Engineering (Dropped out)"
-              institute="IIT Madras"
-              duration="2014 - 2019"
-              grade="NA"
-            />
-            <EducationBlock
-              title="Class XII, CBSE-AISSCE	"
-              institute="DPS Kalyanpur, Kanpur"
-              duration="2013 - 2014"
-              grade="89%"
             />
           </div>
         </div>
