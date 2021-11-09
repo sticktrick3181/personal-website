@@ -63,7 +63,6 @@ function MyApp(props) {
           <motion.main
             key={router.route}
             transition={{ duration: PAGE_TRANSITION_DELAY_SECONDS }}
-            initial={{ x: 1000, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -1000, opacity: 0 }}
             role="main"
